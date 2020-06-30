@@ -1,10 +1,10 @@
-shader_set(shd_demo);
+shader_set(shd_blur);
 
-var uniform_time = shader_get_uniform(shd_demo, "time");
-shader_set_uniform_f(uniform_time, current_time / 1000);
+var uniform_tex_size = shader_get_uniform(shd_blur, "texture_size");
+shader_set_uniform_f(uniform_tex_size, sprite_get_width(spr_duckling), sprite_get_height(spr_duckling));
 
-var uniform_brightness = shader_get_uniform(shd_demo, "brightness");
-shader_set_uniform_f(uniform_brightness, 1);
+
+
 draw_sprite(spr_duckling, 0, 32, 32);
 
 
